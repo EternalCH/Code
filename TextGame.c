@@ -23,11 +23,15 @@ int main()
         printf("怪物进行了攻击,造成了%d伤害\n",moster_attack_damage);
         printf("玩家剩余%d血量",player_max_hp);
         if(player_max_hp <= 0)
+        {
             printf("你失败了\n");
             break;
+        }
         if(moster_max_hp <= 0)
+        {
             printf("你获得了胜利!\n");
             break;
+        }
     }
     return 0;
 }
