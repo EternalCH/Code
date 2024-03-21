@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #define PLAYER_ATTACK_POWER 20
 #define MOSTER_ATTACK_POWER 5
@@ -9,27 +9,27 @@ int main()
     int player_max_hp=100,moster_max_hp=500,player_attack_damage,moster_attack_damage;
     srand(time(NULL));
     char name;
-    printf("ÇëÊäÈëÄãµÄÃû×Ö\n");
+    printf("è¯·è¾“å…¥ä½ çš„åå­—\n");
     scanf("%s",name);
 
     while (1)
     {
         player_attack_damage = PLAYER_ATTACK_POWER * (rand()%4+3);
         moster_max_hp -= player_attack_damage;
-        printf("%s½øĞĞÁË¹¥»÷,Íæ¼ÒÔì³ÉÁË%dÉËº¦\n",name,player_attack_damage);
-        printf("¹ÖÎïÊ£Óà%dÑªÁ¿\n",moster_max_hp);
+        printf("%sè¿›è¡Œäº†æ”»å‡»,ç©å®¶é€ æˆäº†%dä¼¤å®³\n",name,player_attack_damage);
+        printf("æ€ªç‰©å‰©ä½™%dè¡€é‡\n",moster_max_hp);
         moster_attack_damage = MOSTER_ATTACK_POWER*(rand()%4+3);
         player_max_hp -= moster_attack_damage;
-        printf("¹ÖÎï½øĞĞÁË¹¥»÷,Ôì³ÉÁË%dÉËº¦\n",moster_attack_damage);
-        printf("Íæ¼ÒÊ£Óà%dÑªÁ¿",player_max_hp);
+        printf("æ€ªç‰©è¿›è¡Œäº†æ”»å‡»,é€ æˆäº†%dä¼¤å®³\n",moster_attack_damage);
+        printf("ç©å®¶å‰©ä½™%dè¡€é‡",player_max_hp);
         if(player_max_hp <= 0)
         {
-            printf("ÄãÊ§°ÜÁË\n");
+            printf("ä½ å¤±è´¥äº†\n");
             break;
         }
         if(moster_max_hp <= 0)
         {
-            printf("Äã»ñµÃÁËÊ¤Àû!\n");
+            printf("ä½ è·å¾—äº†èƒœåˆ©!\n");
             break;
         }
     }
